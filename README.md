@@ -1,5 +1,5 @@
 ## iHealth_im
-iHealth 项目的即时通讯模块后台
+iHealth 项目的即时通讯后台
 
 ### 使用技术
 * nodejs
@@ -7,7 +7,7 @@ iHealth 项目的即时通讯模块后台
 
 ### 使用说明
 1. 安装 nodejs 环境  
-装好之后运行以下代码测试 nodejs 生效
+装好之后运行以下代码测试 nodejs 是否生效
 ```
 node -v
 ```
