@@ -1,7 +1,11 @@
 var io = require('../node-v8.7.0-linux-x64/lib/node_modules/npm/node_modules/socket.io').listen(8080);
 io.sockets.on('connection', function (socket) {
+    socket.on('join',function(){
+        socket.join('ios_android');
+    });
     socket.on('message', function (data) {
         var msg = data.msg;
+        /*
         if (msg.search(/你好/) != -1 || msg.search(/你是谁/) != -1){
             msg = '你好啊，我是 iHealth 助手';
         }
@@ -12,6 +16,13 @@ io.sockets.on('connection', function (socket) {
             msg = '你好，我是 iHealth 助手';
         }
         socket.emit('message',{
+            'from' : '主机',
+            'to' : '杨英明',
+            'msg' : msg
+        });
+        */
+
+        socket.broadcast.to('ios_android').emit('message', {
             'from' : '主机',
             'to' : '杨英明',
             'msg' : msg
