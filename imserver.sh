@@ -1,6 +1,6 @@
 #!/bin/bash
 server_name="imServer"
-file_name="imServer.sh"
+file_name="imserver.sh"
 if [ ! -n "$1" ]
 then
     echo "Usages: sh $file_name [start|stop|restart|status|log]"
