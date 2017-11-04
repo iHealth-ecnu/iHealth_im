@@ -7,13 +7,11 @@ io.sockets.on('connection', function (socket) {
     });
     socket.on('message', function (data) {
         // 接收发送过来的消息，和发送用户所处的 roomid
-        var msg = data.msg;
         var roomid = data.roomid;
+        delete data.roomid;
 
         // 在 room 内广播，但是不广播给自己
-        socket.broadcast.to(roomid).emit('message', {
-            'msg' : msg
-        });
+        socket.broadcast.to(roomid).emit('message', data);
         console.log(data);
     });
 });
