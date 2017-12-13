@@ -5,8 +5,14 @@ io.sockets.on('connection', function (socket) {
         socket.join(data.roomid);
         console.log('Join success!' + data.roomid);
     });
+    socket.on('leave',function(data){
+        // 使发送 leave 消息的用户离开对应 room
+        socket.leave(data.roomid);
+        console.log('Leave success!' + data.roomid);
+    });
     socket.on('message', function (data) {
         // 接收发送过来的消息，和发送用户所处的 roomid
+        console.log(data);
         var roomid = data.roomid;
         delete data.roomid;
 
