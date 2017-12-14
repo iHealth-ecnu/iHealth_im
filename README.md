@@ -25,3 +25,6 @@ http://www.52im.net/forum.php?mod=viewthread&tid=190&ctid=15
 
 * mui初级入门教程（五）— 聊聊即时通讯（IM），基于环信 web im SDK  
 https://segmentfault.com/a/1190000005729743#articleHeader11
+
+* socket.io多房间聊天（离开房间）  
+http://blog.csdn.net/qq_29484367/article/details/50806374
