@@ -10,6 +10,11 @@ io.sockets.on('connection', function (socket) {
         socket.leave(data.roomid);
         console.log('Leave success!' + data.roomid);
     });
+    socket.on('move',function(data){
+        // 通知所有相关连接转移到新的聊天室
+        socket.broadcast.emit('move', data);
+        console.log('Let us move!' + data);
+    });
     socket.on('message', function (data) {
         // 接收发送过来的消息，和发送用户所处的 roomid
         console.log(data);
